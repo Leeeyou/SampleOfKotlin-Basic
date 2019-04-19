@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="?selectableItemBackgroundBorderless"
+        android:layout_height="wrap_content">
+
+    <TextView
+            android:id="@+id/tv_name"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            tools:text="CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"/>
+
+    <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            tools:text="BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"/>
+
+
+</android.support.constraint.ConstraintLayout>
