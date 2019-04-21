@@ -7,12 +7,21 @@ import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.text.TextUtils
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
+import com.leeeyou.sampleofkotlin.basic.`interface`.C
+import com.leeeyou.sampleofkotlin.basic.`interface`.ClickListener
+import com.leeeyou.sampleofkotlin.basic.`interface`.D
+import com.leeeyou.sampleofkotlin.basic.extension.centerIndex
+import com.leeeyou.sampleofkotlin.basic.extension.hideKeyboard
+import com.leeeyou.sampleofkotlin.basic.extension.lastChar
+import com.leeeyou.sampleofkotlin.basic.staticMethod.Juicer
+import com.leeeyou.sampleofkotlin.basic.staticMethod.makeAppleJuice
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.content_main.*
@@ -100,14 +109,72 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     val num2 = 2
 
                     Log.d(this@MainActivity.localClassName, "$num1 左移 $num2 位后值为：" + (num1 shl num2))
-                    Log.d(this@MainActivity.localClassName, " $num1 带符号右移 $num2 位后值为：" + (num1 shr num2)+ " :: " + Integer.toBinaryString(num1) + " -> " + Integer.toBinaryString(num1 shr num2))
-                    Log.d(this@MainActivity.localClassName, "-$num1 带符号右移 $num2 位后值为：" + (-num1 shr num2)+ " :: " + Integer.toBinaryString(-num1) + " -> " + Integer.toBinaryString(-num1 shr num2))
-                    Log.d(this@MainActivity.localClassName, " $num1 无符号右移 $num2 位后值为：" + (num1 ushr num2)+ " :: " + Integer.toBinaryString(num1) + " -> " + Integer.toBinaryString(num1 ushr num2))
-                    Log.d(this@MainActivity.localClassName, "-$num1 无符号右移 $num2 位后值为：" + (-num1 ushr num2)+ " :: " + Integer.toBinaryString(-num1) + " -> " + Integer.toBinaryString(-num1 ushr num2))
+                    Log.d(
+                        this@MainActivity.localClassName,
+                        " $num1 带符号右移 $num2 位后值为："
+                                + (num1 shr num2)
+                                + " :: " + Integer.toBinaryString(num1)
+                                + " -> " + Integer.toBinaryString(num1 shr num2)
+                    )
+                    Log.d(
+                        this@MainActivity.localClassName,
+                        "-$num1 带符号右移 $num2 位后值为："
+                                + (-num1 shr num2) + " :: "
+                                + Integer.toBinaryString(-num1) + " -> "
+                                + Integer.toBinaryString(-num1 shr num2)
+                    )
+                    Log.d(
+                        this@MainActivity.localClassName,
+                        " $num1 无符号右移 $num2 位后值为："
+                                + (num1 ushr num2)
+                                + " :: " + Integer.toBinaryString(num1)
+                                + " -> " + Integer.toBinaryString(num1 ushr num2)
+                    )
+                    Log.d(
+                        this@MainActivity.localClassName,
+                        "-$num1 无符号右移 $num2 位后值为："
+                                + (-num1 ushr num2) + " :: "
+                                + Integer.toBinaryString(-num1) + " -> "
+                                + Integer.toBinaryString(-num1 ushr num2)
+                    )
                     Log.d(this@MainActivity.localClassName, "$num1 按位与 $num2 位后值为：" + (num1 and num2))
                     Log.d(this@MainActivity.localClassName, "$num1 按位或 $num2 位后值为：" + (num1 or num2))
                     Log.d(this@MainActivity.localClassName, "$num1 按位异或 $num2 位后值为：" + (num1 xor num2))
-                    Log.d(this@MainActivity.localClassName, "$num1 取反后值为：" + num1.inv() + " :: " + Integer.toBinaryString(num1.inv()))
+                    Log.d(
+                        this@MainActivity.localClassName,
+                        "$num1 取反后值为："
+                                + num1.inv() + " :: "
+                                + Integer.toBinaryString(num1.inv())
+                    )
+                }
+                4 -> {
+                    makeAppleJuice()
+                    Juicer.makeBananaJuice()
+                    Juicer(this@MainActivity).makeWatermelonJuice()
+                }
+                5 -> {
+                    D().bar()
+                    D().foo()
+                    C().bar()
+
+                    D().setClickListener(object : ClickListener {
+                        override fun countClick() {
+                            Log.d(this@MainActivity.localClassName, "点击回调")
+                        }
+                    })
+                }
+                6 -> {
+                    //kotlin中没有?:这样的三目表达式
+                    Log.d(
+                        this@MainActivity.localClassName,
+                        if (TextUtils.isEmpty("".lastChar())) "空串" else "".lastChar()
+                    )
+                    Log.d(this@MainActivity.localClassName, "iLoveChina".lastChar())
+
+                    hideKeyboard()
+
+                    Log.d(this@MainActivity.localClassName, "最后一位的坐标：" + (listOf(1, 2, 3, 4, 5).lastIndex).toString())
+                    Log.d(this@MainActivity.localClassName, "中位的坐标：" + (listOf(1, 2, 3, 4, 5).centerIndex).toString())
                 }
             }
         }
@@ -122,6 +189,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         mGrammarList.add(GrammarBean("Defining variables", "Kotlin中用var表示变量，用val表示不可变的变量；Kotlin具有可推倒特性。"))
         mGrammarList.add(GrammarBean("Using string templates", "拼出丰富的字符串。"))
         mGrammarList.add(GrammarBean("Operations", "逻辑运算符与Java不同。"))
+        mGrammarList.add(GrammarBean("Static Method", "Kotlin没有提供static关键字，只能另想办法。"))
+        mGrammarList.add(GrammarBean("Interface", "实现了多个父类，方法覆盖问题怎么解决？"))
+        mGrammarList.add(GrammarBean("Extensions", "扩展函数和扩展属性是Kotlin中重要的特性。"))
     }
 
     class GrammarAdapter(layoutRes: Int, grammarList: List<GrammarBean>) :
