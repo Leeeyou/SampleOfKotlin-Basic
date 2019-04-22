@@ -76,24 +76,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 }
                 1 -> {
-                    val name = "Rose"
-                    var like = "Lang"
-//                    name = "LiLy"
-//                    like = "Reading"
 
-//                    val person = Person()
-
-//                    Log.d(this@MainActivity.localClassName, "名字是：" + person.name)
-//                    person.name = "XunLeiLei"
-//                    Log.d(this@MainActivity.localClassName, "名字是：" + person.name)
-
-//                    Log.d(this@MainActivity.localClassName, "昵称是：" + person.nickname)
-//                    person.nickname="XunMeiLei"
-//                    person.grow()
-//                    Log.d(this@MainActivity.localClassName, "昵称是：" + person.nickname)
-
-//                    const val TAG = ""
-                    Log.d(this@MainActivity.localClassName, "const val is ：" + TagListener.FirstPosition)
 
                 }
                 2 -> {

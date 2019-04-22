@@ -1,4 +1,4 @@
-package com.leeeyou.sampleofkotlin.basic
+package com.leeeyou.sampleofkotlin.basic.definingVariables
 
 class Person {
     var name = "XunLei"
@@ -13,5 +13,4 @@ class Person {
     fun grow() {
         age += 1
     }
-
 }
