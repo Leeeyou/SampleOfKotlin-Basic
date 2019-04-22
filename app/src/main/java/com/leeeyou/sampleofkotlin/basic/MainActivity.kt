@@ -73,25 +73,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             when (position) {
                 0 -> {
-
-                }
-                1 -> {
-
-
-                }
-                2 -> {
-
-                }
-                3 -> {
-
-                }
-                4 -> {
-
-                }
-                5 -> {
-
-                }
-                6 -> {
                     //kotlin中没有?:这样的三目表达式
                     Log.d(
                         this@MainActivity.localClassName,
@@ -104,43 +85,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     Log.d(this@MainActivity.localClassName, "最后一位的坐标：" + (listOf(1, 2, 3, 4, 5).lastIndex).toString())
                     Log.d(this@MainActivity.localClassName, "中位的坐标：" + (listOf(1, 2, 3, 4, 5).centerIndex).toString())
                 }
-                7 -> {
-                    demoOut(object : Source<List<String>> {
-                        val listOf = listOf("i", "love", "china")
-
-                        override fun print() {
-                            Log.d(this@MainActivity.localClassName, listOf.toString())
-                        }
-
-                        override fun size(): Int {
-                            return listOf.size
-                        }
-
-                        override fun nextT(): List<String> {
-                            return listOf
-                        }
-                    })
-
-                    demoIn(object : MyComparable<Number> {
-                        override fun compareTo(other: Number): Int {
-                            return 100.minus(other.toInt())
-                        }
-                    })
-                }
             }
         }
     }
 
 
     private fun initData() {
-        mGrammarList.add(GrammarBean("Defining functions", "Kotlin中方法可提供默认参数值。"))
-        mGrammarList.add(GrammarBean("Defining variables", "Kotlin中用var表示变量，用val表示不可变的变量；Kotlin具有可推倒特性。"))
-        mGrammarList.add(GrammarBean("Using string templates", "拼出丰富的字符串。"))
-        mGrammarList.add(GrammarBean("Operations", "逻辑运算符与Java不同。"))
-        mGrammarList.add(GrammarBean("Static Method", "Kotlin没有提供static关键字，只能另想办法。"))
-        mGrammarList.add(GrammarBean("Interface", "实现了多个父类，方法覆盖问题怎么解决？"))
         mGrammarList.add(GrammarBean("Extensions", "扩展函数和扩展属性是Kotlin中重要的特性。"))
-        mGrammarList.add(GrammarBean("Generics", "理解Kotlin中的协变和逆变"))
     }
 
     class GrammarAdapter(layoutRes: Int, grammarList: List<GrammarBean>) :
