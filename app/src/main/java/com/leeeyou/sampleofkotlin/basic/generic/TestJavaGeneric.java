@@ -1,16 +1,22 @@
 package com.leeeyou.sampleofkotlin.basic.generic;
 
-import android.util.Log;
-import com.leeeyou.sampleofkotlin.basic.staticMethod.Juicer;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class TestJavaGeneric {
     public static void main(String[] args) {
+        read();
+    }
 
-//        List<Number> numbers = new ArrayList<Integer>();
+    static void writeTo(List<? super Number> list) {
+        list.add(new AtomicInteger(1));
+        list.add(10.1f);
+//        list.add(new String(""));  // 编译错误
+    }
+
+    static void read() {
+        //        List<Number> numbers = new ArrayList<Integer>();
 
         List<Integer> numbers = new ArrayList<>();
         numbers.add(1);
@@ -24,11 +30,5 @@ public class TestJavaGeneric {
 
 //        Juicer.Companion.makeBananaJuice();
 //        Juicer.makeBananaJuice();
-    }
-
-    static void writeTo(List<? super Number> list) {
-        list.add(new AtomicInteger(1));
-        list.add(10.1f);
-//        list.add(new String(""));  // 编译错误
     }
 }

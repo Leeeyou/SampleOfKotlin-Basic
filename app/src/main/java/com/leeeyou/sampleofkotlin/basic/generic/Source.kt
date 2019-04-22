@@ -1,7 +1,5 @@
 package com.leeeyou.sampleofkotlin.basic.generic
 
-import android.util.Log
-
 //Source的元素是协变的，可以将T作为返回值类型
 interface Source<out T> {
     fun nextT(): T
@@ -15,7 +13,7 @@ interface Source<out T> {
 
 fun demoOut(strs: Source<List<String>>) {
     val objects: Source<Any> = strs // This is OK, since T is an out-parameter
-    Log.d("Generics", objects.size().toString())
+    println(objects.size().toString())
     objects.print()
 }
 
@@ -26,7 +24,7 @@ interface MyComparable<in T> {
 }
 
 fun demoIn(x: MyComparable<Number>) {
-    Log.d("Generics", x.compareTo(20).toString())
+    println(x.compareTo(20).toString())
     val y: MyComparable<Double> = x // OK!
-    Log.d("Generics", y.compareTo(20.0).toString())
+    println(y.compareTo(20.0).toString())
 }
