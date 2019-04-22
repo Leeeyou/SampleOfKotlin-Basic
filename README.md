@@ -325,7 +325,7 @@ D().setClickListener(object : ClickListener {
   * Activity.hideKeyboard()
 * 扩展属性
   * List<T>.lastIndex
-* 【示例见SampleOfKotlin-Basic → Extensions】############################
+* 【示例见SampleOfKotlin-Basic → Extensions】
 
 ## 2.12. [Generics](https://kotlinlang.org/docs/reference/generics.html#generics)
 
