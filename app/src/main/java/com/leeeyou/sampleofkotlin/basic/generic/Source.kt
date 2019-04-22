@@ -19,12 +19,14 @@ fun demoOut(strs: Source<List<String>>) {
     objects.print()
 }
 
-
+//MyComparable的元素是逆变的，可以将T作为入参
 interface MyComparable<in T> {
     operator fun compareTo(other: T): Int
 //    fun get():T
 }
 
-fun demoIn(x: MyComparable<Int>) {
+fun demoIn(x: MyComparable<Number>) {
     Log.d("Generics", x.compareTo(20).toString())
+    val y: MyComparable<Double> = x // OK!
+    Log.d("Generics", y.compareTo(20.0).toString())
 }

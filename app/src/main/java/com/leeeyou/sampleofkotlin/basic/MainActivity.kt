@@ -219,7 +219,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         mGrammarList.add(GrammarBean("Static Method", "Kotlin没有提供static关键字，只能另想办法。"))
         mGrammarList.add(GrammarBean("Interface", "实现了多个父类，方法覆盖问题怎么解决？"))
         mGrammarList.add(GrammarBean("Extensions", "扩展函数和扩展属性是Kotlin中重要的特性。"))
-        mGrammarList.add(GrammarBean("Generics", "Kotlin中的型变和投影特性。"))
+        mGrammarList.add(GrammarBean("Generics", "理解Kotlin中的协变和逆变"))
     }
 
     class GrammarAdapter(layoutRes: Int, grammarList: List<GrammarBean>) :
