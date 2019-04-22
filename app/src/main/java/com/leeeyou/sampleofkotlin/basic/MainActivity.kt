@@ -80,13 +80,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 }
                 2 -> {
-                    val price = """
-                                ${'$'}9.99，
-
-
-                                这里展示 / or // or \  or \\
-                                """
-                    Log.d(this@MainActivity.localClassName, "price is ：$price")
+                    
                 }
                 3 -> {
                     val num1 = 8
