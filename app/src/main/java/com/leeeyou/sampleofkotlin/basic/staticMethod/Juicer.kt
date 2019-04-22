@@ -18,7 +18,8 @@ class Juicer(val ctx: Context) {
     }
 
     companion object {
-        fun makeBananaJuice(){
+//        @JvmStatic
+        fun makeBananaJuice() {
             Log.d("Juicer", "做好了香蕉汁")
         }
     }

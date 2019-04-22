@@ -1,6 +1,7 @@
 package com.leeeyou.sampleofkotlin.basic.generic;
 
 import android.util.Log;
+import com.leeeyou.sampleofkotlin.basic.staticMethod.Juicer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,9 @@ public class TestJavaGeneric {
         List<Number> totalList = new ArrayList<>();
         totalList.addAll(subNum);
         Log.d(TestJavaGeneric.class.getSimpleName(), String.valueOf(totalList.size()));
+
+//        Juicer.Companion.makeBananaJuice();
+//        Juicer.makeBananaJuice();
     }
 
     static void writeTo(List<? super Number> list) {
