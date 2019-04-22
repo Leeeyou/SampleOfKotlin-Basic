@@ -80,50 +80,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 }
                 2 -> {
-                    
+
                 }
                 3 -> {
-                    val num1 = 8
-                    val num2 = 2
 
-                    Log.d(this@MainActivity.localClassName, "$num1 左移 $num2 位后值为：" + (num1 shl num2))
-                    Log.d(
-                        this@MainActivity.localClassName,
-                        " $num1 带符号右移 $num2 位后值为："
-                                + (num1 shr num2)
-                                + " :: " + Integer.toBinaryString(num1)
-                                + " -> " + Integer.toBinaryString(num1 shr num2)
-                    )
-                    Log.d(
-                        this@MainActivity.localClassName,
-                        "-$num1 带符号右移 $num2 位后值为："
-                                + (-num1 shr num2) + " :: "
-                                + Integer.toBinaryString(-num1) + " -> "
-                                + Integer.toBinaryString(-num1 shr num2)
-                    )
-                    Log.d(
-                        this@MainActivity.localClassName,
-                        " $num1 无符号右移 $num2 位后值为："
-                                + (num1 ushr num2)
-                                + " :: " + Integer.toBinaryString(num1)
-                                + " -> " + Integer.toBinaryString(num1 ushr num2)
-                    )
-                    Log.d(
-                        this@MainActivity.localClassName,
-                        "-$num1 无符号右移 $num2 位后值为："
-                                + (-num1 ushr num2) + " :: "
-                                + Integer.toBinaryString(-num1) + " -> "
-                                + Integer.toBinaryString(-num1 ushr num2)
-                    )
-                    Log.d(this@MainActivity.localClassName, "$num1 按位与 $num2 位后值为：" + (num1 and num2))
-                    Log.d(this@MainActivity.localClassName, "$num1 按位或 $num2 位后值为：" + (num1 or num2))
-                    Log.d(this@MainActivity.localClassName, "$num1 按位异或 $num2 位后值为：" + (num1 xor num2))
-                    Log.d(
-                        this@MainActivity.localClassName,
-                        "$num1 取反后值为："
-                                + num1.inv() + " :: "
-                                + Integer.toBinaryString(num1.inv())
-                    )
                 }
                 4 -> {
                     makeAppleJuice()
