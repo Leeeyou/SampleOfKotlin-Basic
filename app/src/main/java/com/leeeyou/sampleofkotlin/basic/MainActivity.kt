@@ -73,10 +73,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             when (position) {
                 0 -> {
-//                    Log.d(this@MainActivity.localClassName, "返回值是：" + double().toString())
-//                    Log.d(this@MainActivity.localClassName, "返回值是：" + double(2).toString())
-//                    Log.d(this@MainActivity.localClassName, "返回值是：" + double(y = 10).toString())
-                    Log.d(this@MainActivity.localClassName, "返回值是：" + double(y = 10, x = 2).toString())
+
                 }
                 1 -> {
                     val name = "Rose"
@@ -207,9 +204,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
-    private fun double(x: Int = 100, y: Int = 200): Int {
-        return (2 * x) + y
-    }
 
     private fun initData() {
         mGrammarList.add(GrammarBean("Defining functions", "Kotlin中方法可提供默认参数值。"))
