@@ -20,7 +20,7 @@ public class TestJavaGeneric {
 
         List<Number> totalList = new ArrayList<>();
         totalList.addAll(subNum);
-        Log.d(TestJavaGeneric.class.getSimpleName(), String.valueOf(totalList.size()));
+        System.out.println(String.valueOf(totalList.size()));
 
 //        Juicer.Companion.makeBananaJuice();
 //        Juicer.makeBananaJuice();
