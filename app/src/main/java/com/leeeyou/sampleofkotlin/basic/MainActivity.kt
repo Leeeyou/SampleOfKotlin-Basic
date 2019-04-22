@@ -89,15 +89,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 }
                 5 -> {
-                    D().bar()
-                    D().foo()
-                    C().bar()
 
-                    D().setClickListener(object : ClickListener {
-                        override fun countClick() {
-                            Log.d(this@MainActivity.localClassName, "点击回调")
-                        }
-                    })
                 }
                 6 -> {
                     //kotlin中没有?:这样的三目表达式

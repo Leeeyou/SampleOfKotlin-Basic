@@ -1,10 +1,8 @@
 package com.leeeyou.sampleofkotlin.basic.`interface`
 
-import android.util.Log
-
 interface A {
     fun foo() {
-        Log.d("InterfaceDemo", "foo A")
+        println("foo A")
     }
 
     fun bar()
@@ -12,17 +10,17 @@ interface A {
 
 interface B {
     fun foo() {
-        Log.d("InterfaceDemo", "foo B")
+        println("foo B")
     }
 
     fun bar() {
-        Log.d("InterfaceDemo", "bar B")
+        println("bar B")
     }
 }
 
 class C : A {
     override fun bar() {
-        Log.d("InterfaceDemo", "bar C")
+        println("bar C")
     }
 }
 
@@ -39,4 +37,16 @@ class D : A, B {
     fun setClickListener(listener: ClickListener?) {
         listener?.also { it.countClick() }
     }
+}
+
+fun main() {
+    D().bar()
+    D().foo()
+    C().bar()
+
+    D().setClickListener(object : ClickListener {
+        override fun countClick() {
+            println("点击回调")
+        }
+    })
 }
