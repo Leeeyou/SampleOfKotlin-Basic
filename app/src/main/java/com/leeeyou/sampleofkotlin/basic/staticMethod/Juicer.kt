@@ -1,26 +1,29 @@
 package com.leeeyou.sampleofkotlin.basic.staticMethod
 
-import android.content.Context
-import android.util.Log
-
 fun makeAppleJuice() {
-    Log.d("Juicer", "做好了苹果汁")
+    println("做好了苹果汁")
 
     //这里没法引用到mCtx
 }
 
-class Juicer(val ctx: Context) {
+class Juicer(val ctx: String) {
 
     var mCtx = ctx
 
     fun makeWatermelonJuice() {
-        Log.d("Juicer", "做好了西瓜汁")
+        println("做好了西瓜汁")
     }
 
     companion object {
-//        @JvmStatic
+        //        @JvmStatic
         fun makeBananaJuice() {
-            Log.d("Juicer", "做好了香蕉汁")
+            println("做好了香蕉汁")
         }
     }
+}
+
+fun main() {
+    makeAppleJuice()
+    Juicer.makeBananaJuice()
+    Juicer("myContext").makeWatermelonJuice()
 }

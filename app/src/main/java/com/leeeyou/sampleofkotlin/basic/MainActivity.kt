@@ -86,9 +86,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 }
                 4 -> {
-                    makeAppleJuice()
-                    Juicer.makeBananaJuice()
-                    Juicer(this@MainActivity).makeWatermelonJuice()
+
                 }
                 5 -> {
                     D().bar()
