@@ -459,7 +459,7 @@ private fun resultByOpt(num1: Int, num2: Int, result: (Int, Int) -> Int): Int {
 
 # 4. 总结
 
-## 4.1. Kotlin语法到项目展示
+## 4.1. Kotlin基础语法总结
 
 * 语法简单，不啰嗦
 * 空指针安全
