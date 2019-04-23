@@ -450,6 +450,8 @@ private fun resultByOpt(num1: Int, num2: Int, result: (Int, Int) -> Int): Int {
 
 ## 3.2. kotlin-android-extensions插件原理介绍
 
+* 在示例项目中有使用到插件：apply plugin: 'kotlin-android-extensions'
+* 观察MainActivity这个页面中view的引用方式
 * public View _$_findCachedViewById(int var1){}
 * private HashMap _$_findViewCache;
 
