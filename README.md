@@ -32,7 +32,7 @@ Getting started with Kotlin Basics
 * 能少则少
 
   * Kotlin支持类型推断，不像Java那样啰嗦。
-  * 用var表示变量，val表示不可变的变量。
+  * 用var表示变量，val表示只读变量。
   * 定义方法很简单，连function都缩写成了fun。
   * 类的继承和实现很简单，使用:即可。
   * Kotlin每个句子都不需要加分号。
