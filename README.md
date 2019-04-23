@@ -339,7 +339,7 @@ D().setClickListener(object : ClickListener {
 * 【示例见SampleOfKotlin-Basic → com.leeeyou.sampleofkotlin.basic.generic】
 * 对比Java与Kotlin中的使用对比
 
- - |Produce|Consumer
+~|Produce|Consumer
 :-:|:-:|:-:
 Java| ? extend E <br>（表示包括E在内的任何E的子类） | ? super E <br> （表示包括E在内的任何E的父类）
 Kotlin| out E <br>（只能用作输出，可作为返回值类型，无法作为入参类型） | in E <br>（只能用作输入，可作为入参类型，无法作为返回值类型）
