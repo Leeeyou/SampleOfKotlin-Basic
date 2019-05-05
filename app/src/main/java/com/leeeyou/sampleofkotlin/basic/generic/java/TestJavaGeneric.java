@@ -1,4 +1,4 @@
-package com.leeeyou.sampleofkotlin.basic.generic;
+package com.leeeyou.sampleofkotlin.basic.generic.java;
 
 import com.leeeyou.sampleofkotlin.basic.generic.bean.Apple;
 import com.leeeyou.sampleofkotlin.basic.generic.bean.Fruit;
@@ -30,7 +30,7 @@ public class TestJavaGeneric {
         fruits.add(new Fruit("水果1"));
         fruits.add(new Fruit("水果2"));
         fruits.add(new Fruit("水果3"));
-        appleList = fruits;
+        appleList = fruits; //逆变
         for (Object object : appleList) {
             System.out.println(((Fruit) object).getName());
         }
@@ -59,10 +59,10 @@ public class TestJavaGeneric {
         redAppleList.add(new RedApple("红苹果2"));
         redAppleList.add(new RedApple("红苹果3"));
 
-//        List<Apple> appleList = redAppleList; //error，这里明确规定要求是Apple类型，没有灵活性可言。？没有继承关系可言
-        List<? extends Apple> appleList = redAppleList;//利用通配符的灵活性，可以成功将 红苹果列表 赋值给 苹果列表
-        for (Fruit fruit : appleList) {
-            System.out.println(fruit.getName());
+//        List<Apple> appleList = redAppleList; //error，这里明确规定要求是Apple类型，没有灵活性可言，没有继承关系可言
+        List<? extends Apple> appleList = redAppleList;//利用通配符的灵活性，可以成功将 红苹果列表 赋值给 苹果列表，（协变）
+        for (Apple apple : appleList) {
+            System.out.println(apple.getName());
         }
         System.out.println();
 
@@ -72,8 +72,8 @@ public class TestJavaGeneric {
         greenApples.add(new GreenApple("绿苹果3"));
         greenApples.add(new GreenApple("绿苹果4"));
         appleList = greenApples;//利用通配符，appleList 灵活的接收了 红苹果列表 和 绿苹果列表
-        for (Fruit fruit : appleList) {
-            System.out.println(fruit.getName());
+        for (Apple apple : appleList) {
+            System.out.println(apple.getName());
         }
 
 //        appleList.add(new Apple("苹果1"));//error
