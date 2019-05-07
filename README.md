@@ -333,8 +333,8 @@ D().setClickListener(object : ClickListener {
   * [通配符](http://leeeyou.xyz/2018/09/20/blog-2018-09-20-Java%E4%B9%8B%E6%B3%9B%E5%9E%8B/#2-3-%E9%80%9A%E9%85%8D%E7%AC%A6)（有界通配符和无界通配符）
 * Kotlin中泛型特点
   * 声明处型变：out和in
-    * out：当一个类（List）的类型参数（E）被声明为out时，它就只能出现在该类成员的输出位置，但回报是我们能够将子类泛型的对象赋值给使用父类泛型的对象，即通常所说的类List是在参数E上是协变的。
-    * in：当一个类（Consumer）的类型参数（E）被声明为in时，它就只能出现在该类成员的输入位置，但回报是我们可以将父类泛型的对象赋值给使用子类泛型的对象，即通常所说的类Consumer在参数E上是逆变的。
+    * out：当一个类（List）的类型参数（E）被声明为out时，我们就可以将子类泛型的对象赋值给使用父类泛型的对象，即通常所说的类List是在参数E上是协变的。但是副作用是它只能出现在该类成员的输出位置上。
+    * in：当一个类（Consumer）的类型参数（E）被声明为in时，我们就可以将父类泛型的对象赋值给使用子类泛型的对象，即通常所说的类Consumer在参数E上是逆变的。但副作用是它只能出现在该类成员的输入位置。
     * 协变和逆变关系图：![协变和逆变关系图](https://github.com/Leeeyou/Img/blob/master/leeeyou/kotlin/in-out%E5%85%B3%E7%B3%BB%E5%9B%BE.png?raw=true)
   * 类型投影
     * 使用处型变

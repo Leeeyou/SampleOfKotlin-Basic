@@ -10,8 +10,8 @@ import java.util.List;
 
 public class TestJavaGeneric {
     public static void main(String[] args) {
-        testUpperBoundsWildcards();
-//        testLowerBoundsWildcards();
+//        testUpperBoundsWildcards();
+        testLowerBoundsWildcards();
     }
 
     private static void testLowerBoundsWildcards() {
