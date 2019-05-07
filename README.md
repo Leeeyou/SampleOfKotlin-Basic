@@ -338,7 +338,7 @@ D().setClickListener(object : ClickListener {
     * 协变和逆变关系图：![协变和逆变关系图](https://github.com/Leeeyou/Img/blob/master/leeeyou/kotlin/in-out%E5%85%B3%E7%B3%BB%E5%9B%BE.png?raw=true)
   * 类型投影
     * 使用处型变
-      * Kotlin的使用处型变直接对应Java的有界通配符。Kotlin中的MutableList<out T>和Java中的MutableList<? extends T>是一个意思。in投影的MutableList<in T>对应到Java的MutableList<? super T>。
+      * Kotlin的使用处型变直接对应Java的有界通配符。Kotlin中的MutableList&lt;out T>和Java中的MutableList<? extends T>是一个意思。in投影的MutableList&lt;in T>对应到Java的MutableList<? super T>。
     * 星号投影
       * Kotlin的MyType<*>相当于Java中的MyType<?>。
   * 同时限定多个类型

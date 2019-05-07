@@ -8,13 +8,13 @@ import com.leeeyou.sampleofkotlin.basic.generic.bean.Computer
 //}
 
 //对方法实施真泛型
-inline fun <reified T> Gson.fromJson(json: String): T {
+inline fun <reified T> Gson.toObject(json: String): T {
     return fromJson(json, T::class.java)
 }
 
 fun main() {
     val json = "{\"color\":\"black\",\"brand\":\"dell\",\"coreNum\":8}"
-    val fromJson = Gson().fromJson<Computer>(json)
+    val fromJson = Gson().toObject<Computer>(json)
     println(fromJson.color)
     println(fromJson.brand)
     println(fromJson.coreNum)
