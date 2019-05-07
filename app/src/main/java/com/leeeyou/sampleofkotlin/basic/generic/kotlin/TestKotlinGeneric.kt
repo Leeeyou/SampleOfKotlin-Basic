@@ -32,7 +32,7 @@ fun testOut() {
     val redApple: Source<RedApple> = Source(RedApple("山东红苹果"))
     println(redApple.nextT().name)
 //    redApple.changeT(RedApple("花牛苹果"))
-    val apple: Source<Apple> = redApple //error
+//    val apple: Source<Apple> = redApple //error
     println()
 
     val redAppleList: List<RedApple> = arrayListOf(RedApple("红苹果1"), RedApple("红苹果2"), RedApple("红苹果3"))

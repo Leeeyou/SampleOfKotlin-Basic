@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 # SampleOfKotlin-Basic
 Kotlin基础入门知识
 
+=======
+>>>>>>> d7870cb7f5ce73849c0ff4333a90a069d0366048
 # 1. 简介
 
 ## 1.1. 历史发展
@@ -347,7 +350,11 @@ D().setClickListener(object : ClickListener {
   * 同时限定多个类型
   * Kotlin中可以获取泛型的实际类型
     * inline（内联函数） + reified（实化类型）能处理方法级别的真泛型
+<<<<<<< HEAD
       * 我们都知道内联函数的原理，编译器把实现内联函数的字节码动态插入到每次的调用点。那么实化的原理正是基于这个机制，每次调用带实化类型参数的函数时，编译器都知道此次调用中作为泛型类型实参的具体类型。所以编译器只要在每次调用时生成对应不同类型实参调用的字节码插入到调用点即可。
+=======
+      *  因为kotlin和Java是伪泛型，编译完之后就没有了T，所以只能通过inline关键字，将这段代码植入到调用处，才能知道参数的类型。
+>>>>>>> d7870cb7f5ce73849c0ff4333a90a069d0366048
     * 类级别的泛型需要自己改造
       * 通过伴生对象结合重载invoke调用操作符的方式
 
@@ -355,8 +362,13 @@ D().setClickListener(object : ClickListener {
 
     ~|协变|逆变|不型变
     :-:|:-:|:-:|:-:
+<<<<<<< HEAD
     Java| ? extend E | ? super E | ArrayList<Apple>
     Kotlin| out E  | in E  | MutableList<Apple>  
+=======
+    Java| ? extend E | ? super E | ArrayList&lt;Apple>
+    Kotlin| out E  | in E  | MutableList&lt;Apple>  
+>>>>>>> d7870cb7f5ce73849c0ff4333a90a069d0366048
 
     Java中的泛型是不型变的，这意味着List&lt;RedApple>并不是List&lt;Apple>的子类型。而通过有界通配符extends关键字使得类型可以协变，即可以让Collection&lt;RedApple>表示为Collection<? extends Apple>的子类型。
 
